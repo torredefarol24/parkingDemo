@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const vehicles_1 = require("./vehicles");
+const parkingGate_1 = require("./parkingGate");
+const parking_1 = require("./parking");
+const router = (0, express_1.Router)();
+router.use("/vehicles", vehicles_1.vehicleRouter);
+router.use("/parking-gates", parkingGate_1.parkingGateRouter);
+router.use("/parkings", parking_1.parkingRouter);
+exports.default = router;
